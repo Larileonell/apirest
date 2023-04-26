@@ -1,3 +1,5 @@
+package com.example.study.apirest;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +17,7 @@ public class PersonController {
     public Person consultAllPersons () {
         return (Person) repositoryPerson.findAll();
     }
- public Optional<PersonRepository> consulById (@PathVariable Long id){
+ public Optional<Person> consulById (@PathVariable Long id){
         return repositoryPerson.findById(id);
  }
 
